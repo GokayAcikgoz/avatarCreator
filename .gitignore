@@ -1,0 +1,65 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files — secrets live here and are never committed; only the template is tracked
+.env*
+!.env.example
+
+# local Claude Code session state
+/.claude/scheduled_tasks.lock
+/.claude/settings.local.json
+
+# vercel
+.vercel
+
+# local Blender/MPFB2 tooling cache (cloned addon + packaged extension zip) —
+# see docs/asset-pipeline.md for how to regenerate this, not committed as repo weight
+/.pipeline-tools/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# .NET (api/)
+api/**/bin/
+api/**/obj/
+api/**/*.user
+api/storage/
+# Local object storage written by the API in development (renders, exports, thumbnails)
+api/src/AvatarForge.Api/storage/
+
+# Regeneratable Blender-importable copies of public/models/ (meshopt-decompressed) —
+# see docs/export-pipeline.md for the one-line regeneration command, not committed as repo weight
+api/server-assets/
+
+# on-device face analysis runtime, copied from node_modules by scripts/prepare-mediapipe.mjs
+/public/mediapipe/wasm/

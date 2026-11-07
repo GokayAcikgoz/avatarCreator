@@ -1,0 +1,9 @@
+@host = http://localhost:5080
+# Create a key in the dashboard (/dashboard) and paste it here locally — don't commit a real key.
+@apiKey = af_live_replace_me
+
+GET {{host}}/api/v1/assets?category=hair
+X-API-Key: {{apiKey}}
+Accept: application/json
+
+###

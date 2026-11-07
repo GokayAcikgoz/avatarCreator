@@ -1,0 +1,14 @@
+{
+  "$comment": "Facial expression presets — each is a combination of real ARKit face-unit shape keys baked onto the body and interpolated onto eyes/eyebrows/eyelashes/teeth/tongue/facial hair (see tools/blender-pipeline/generate_face_system.py). Shared by the web viewer, the API's validator and the Blender renderer. ARKit naming is deliberate: a future webcam face tracker (MediaPipe/ARKit) can drive the same keys by name.",
+  "expressions": [
+    { "id": "neutral", "name": "Neutral", "morphs": {} },
+    { "id": "smile", "name": "Smile", "morphs": { "mouthSmileLeft": 0.8, "mouthSmileRight": 0.8, "cheekSquintLeft": 0.3, "cheekSquintRight": 0.3 } },
+    { "id": "sad", "name": "Sad", "morphs": { "mouthFrownLeft": 0.6, "mouthFrownRight": 0.6, "browInnerUp": 0.5, "mouthLowerDownLeft": 0.2, "mouthLowerDownRight": 0.2 } },
+    { "id": "angry", "name": "Angry", "morphs": { "browDownLeft": 0.7, "browDownRight": 0.7, "noseSneerLeft": 0.4, "noseSneerRight": 0.4, "mouthPressLeft": 0.3, "mouthPressRight": 0.3 } },
+    { "id": "surprised", "name": "Surprised", "morphs": { "browOuterUpLeft": 0.7, "browOuterUpRight": 0.7, "browInnerUp": 0.6, "eyeWideLeft": 0.5, "eyeWideRight": 0.5, "jawOpen": 0.3 } },
+    { "id": "blink", "name": "Blink", "morphs": { "eyeBlinkLeft": 1, "eyeBlinkRight": 1 } },
+    { "id": "wink", "name": "Wink", "morphs": { "eyeBlinkLeft": 1, "mouthSmileLeft": 0.45, "cheekSquintLeft": 0.4 } },
+    { "id": "laugh", "name": "Laugh", "morphs": { "mouthSmileLeft": 1, "mouthSmileRight": 1, "cheekSquintLeft": 0.5, "cheekSquintRight": 0.5, "jawOpen": 0.4 } },
+    { "id": "talk", "name": "Talk", "morphs": { "jawOpen": 0.25, "mouthFunnel": 0.15 } }
+  ]
+}

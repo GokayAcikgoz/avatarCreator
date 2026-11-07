@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\AvatarForge.Domain\AvatarForge.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- shared/*.json is the single source of truth for the catalog, presets, expressions,
+       animation clips and rig numbers — the web app imports the same files. Embedding them
+       means the API never drifts from what the web creator shows. -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\shared\*.json" LogicalName="AvatarForge.Shared.%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>

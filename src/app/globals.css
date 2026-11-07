@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07080c;
+  --foreground: #eceef4;
+  --surface: #0d0f16;
+  --surface-2: #131622;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: #7c7cff;
+  --accent-2: #c86bff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Thin, unobtrusive scrollbars for the editor's panels. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.14) transparent;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Range sliders: a filled track driven by --fill (0–100%). */
+.af-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+}
+.af-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) var(--fill, 50%), rgba(255, 255, 255, 0.1) var(--fill, 50%));
+}
+.af-range::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.af-range::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+.af-range-bipolar::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) var(--from),
+    var(--accent) var(--from),
+    var(--accent-2) var(--fill),
+    rgba(255, 255, 255, 0.1) var(--fill)
+  );
+}
+.af-range-bipolar::-moz-range-track {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) var(--from),
+    var(--accent) var(--from),
+    var(--accent-2) var(--fill),
+    rgba(255, 255, 255, 0.1) var(--fill)
+  );
+}
+.af-range-bipolar::-moz-range-progress {
+  background: transparent;
+}
+.af-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(124, 124, 255, 0.25), 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 120ms ease;
+}
+.af-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(124, 124, 255, 0.25), 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.af-range:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+.af-range:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Viewer backdrop: soft studio glow behind the transparent WebGL canvas. */
+.af-backdrop {
+  background:
+    radial-gradient(60% 55% at 50% 38%, rgba(124, 124, 255, 0.16), transparent 70%),
+    radial-gradient(40% 40% at 80% 90%, rgba(200, 107, 255, 0.08), transparent 70%),
+    linear-gradient(180deg, #0b0d14 0%, #07080c 100%);
+}
+
+.af-grid-floor {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(70% 60% at 50% 70%, black, transparent);
+}
+
+@keyframes af-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.af-fade-up {
+  animation: af-fade-up 220ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .af-fade-up {
+    animation: none;
+  }
+}

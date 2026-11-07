@@ -1,0 +1,113 @@
+{
+  "$comment": "Curated starting points (CLAUDE.md §8). Each is a complete, valid AvatarConfiguration v1 — picking one replaces the editor's configuration, and every field stays editable afterwards. Served by GET /api/v1/presets and used by the web creator's Presets tab.",
+  "presets": [
+    {
+      "id": "weekend", "name": "Weekend", "description": "Relaxed tee, cargos and a bit of stubble.",
+      "configuration": {
+        "version": 1,
+        "body": { "type": "average", "height": 0.55, "shoulderWidth": 0.5, "proportion": 0.5 },
+        "face": {
+          "shape": "oval", "skinTone": "#C68863", "eyeShape": "almond", "eyeColor": "#3B2415", "eyebrows": "natural",
+          "nose": "straight", "mouth": "neutral", "earShape": "standard",
+          "morphs": { "head-scale-horiz-incr": 0.2, "chin-width-incr": 0.35, "nose-scale-horiz-incr": 0.25 },
+          "expression": "smile"
+        },
+        "hair": { "style": "hair_short_messy", "color": "#3B2415" },
+        "facialHair": { "beardStyle": "beard_stubble", "mustacheStyle": null, "color": "#3B2415" },
+        "clothing": { "top": "top_crew_tee", "topColor": "#1F3A5F", "bottom": "bottom_cargo_pants", "bottomColor": "#C2B280", "shoes": "shoes_cloth", "shoesColor": "#F5F5F5" },
+        "accessories": [],
+        "accessoryColors": {}
+      }
+    },
+    {
+      "id": "studio", "name": "Studio", "description": "Sharp polo, tailored trousers, bold frames.",
+      "configuration": {
+        "version": 1,
+        "body": { "type": "athletic", "height": 0.62, "shoulderWidth": 0.72, "proportion": 0.55 },
+        "face": {
+          "shape": "square", "skinTone": "#8D5A3B", "eyeShape": "almond", "eyeColor": "#2B1B12", "eyebrows": "natural",
+          "nose": "wide", "mouth": "full", "earShape": "standard",
+          "morphs": { "chin-width-incr": 0.6, "nose-scale-horiz-incr": 0.55, "mouth-upperlip-volume-incr": 0.4, "mouth-lowerlip-volume-incr": 0.4 },
+          "expression": "neutral"
+        },
+        "hair": { "style": "hair_swept", "color": "#1B1210" },
+        "facialHair": { "beardStyle": "beard_short", "mustacheStyle": "mustache_classic", "color": "#1B1210" },
+        "clothing": { "top": "top_polo", "topColor": "#F5F5F5", "bottom": "bottom_wool_pants", "bottomColor": "#495057", "shoes": "shoes_ankle_boots", "shoesColor": "#6B4F3A" },
+        "accessories": ["glasses_wayfarer"],
+        "accessoryColors": {}
+      }
+    },
+    {
+      "id": "sunny", "name": "Sunny", "description": "Long hair, tank top, denim shorts and shades.",
+      "configuration": {
+        "version": 1,
+        "body": { "type": "slim", "height": 0.45, "shoulderWidth": 0.3, "proportion": 0.58 },
+        "face": {
+          "shape": "heart", "skinTone": "#EDC3A2", "eyeShape": "round", "eyeColor": "#4A6FA5", "eyebrows": "natural",
+          "nose": "small", "mouth": "full", "earShape": "standard",
+          "morphs": { "l-eye-scale-incr": 0.35, "r-eye-scale-incr": 0.35, "mouth-upperlip-volume-incr": 0.3, "mouth-lowerlip-volume-incr": 0.45 },
+          "expression": "smile"
+        },
+        "hair": { "style": "hair_long_straight", "color": "#D9B77E" },
+        "facialHair": { "beardStyle": null, "mustacheStyle": null, "color": "#B8864B" },
+        "clothing": { "top": "top_tank", "topColor": "#D96C4E", "bottom": "bottom_denim_shorts", "bottomColor": "#3E5C8A", "shoes": "shoes_ankle_boots", "shoesColor": "#8B5A2B" },
+        "accessories": ["glasses_sunglasses"],
+        "accessoryColors": {}
+      }
+    },
+    {
+      "id": "cozy", "name": "Cozy", "description": "Knit sweater, top bun and round frames.",
+      "configuration": {
+        "version": 1,
+        "body": { "type": "average", "height": 0.4, "shoulderWidth": 0.45, "proportion": 0.5 },
+        "face": {
+          "shape": "round", "skinTone": "#E0AC89", "eyeShape": "almond", "eyeColor": "#5B7F4F", "eyebrows": "natural",
+          "nose": "straight", "mouth": "neutral", "earShape": "standard",
+          "morphs": { "l-cheek-volume-incr": 0.45, "r-cheek-volume-incr": 0.45, "head-scale-horiz-incr": 0.3 },
+          "expression": "neutral"
+        },
+        "hair": { "style": "hair_bun", "color": "#5E3B22" },
+        "facialHair": { "beardStyle": null, "mustacheStyle": null, "color": "#5E3B22" },
+        "clothing": { "top": "top_sweater", "topColor": "#7A1F2B", "bottom": "bottom_wool_pants", "bottomColor": "#1C2A3A", "shoes": "shoes_ankle_boots", "shoesColor": "#111111" },
+        "accessories": ["glasses_round"],
+        "accessoryColors": {}
+      }
+    },
+    {
+      "id": "urban", "name": "Urban", "description": "Bucket hat, work boots and a goatee.",
+      "configuration": {
+        "version": 1,
+        "body": { "type": "broad", "height": 0.7, "shoulderWidth": 0.92, "proportion": 0.42 },
+        "face": {
+          "shape": "square", "skinTone": "#6B4128", "eyeShape": "almond", "eyeColor": "#2B1B12", "eyebrows": "natural",
+          "nose": "wide", "mouth": "full", "earShape": "standard",
+          "morphs": { "chin-width-incr": 0.75, "head-scale-horiz-incr": 0.35, "nose-scale-horiz-incr": 0.7, "mouth-scale-horiz-incr": 0.3 },
+          "expression": "neutral"
+        },
+        "hair": { "style": "hair_crop", "color": "#1B1210" },
+        "facialHair": { "beardStyle": "beard_goatee", "mustacheStyle": "mustache_classic", "color": "#1B1210" },
+        "clothing": { "top": "top_tshirt", "topColor": "#111111", "bottom": "bottom_cargo_pants", "bottomColor": "#495057", "shoes": "shoes_leather_boots", "shoesColor": "#6B4F3A" },
+        "accessories": ["hat_bucket"],
+        "accessoryColors": { "hat_bucket": "#111111" }
+      }
+    },
+    {
+      "id": "holiday", "name": "Holiday", "description": "Festive braids, knitwear and a holiday hat.",
+      "configuration": {
+        "version": 1,
+        "body": { "type": "average", "height": 0.5, "shoulderWidth": 0.5, "proportion": 0.5 },
+        "face": {
+          "shape": "oval", "skinTone": "#F6D7C3", "eyeShape": "round", "eyeColor": "#3E7C8C", "eyebrows": "natural",
+          "nose": "small", "mouth": "neutral", "earShape": "standard",
+          "morphs": { "l-eye-scale-incr": 0.25, "r-eye-scale-incr": 0.25 },
+          "expression": "laugh"
+        },
+        "hair": { "style": "hair_braided", "color": "#A8432C" },
+        "facialHair": { "beardStyle": null, "mustacheStyle": null, "color": "#A8432C" },
+        "clothing": { "top": "top_sweater", "topColor": "#2E5E4E", "bottom": "bottom_wool_pants", "bottomColor": "#7A1F2B", "shoes": "shoes_rain_boots", "shoesColor": "#111111" },
+        "accessories": ["hat_santa"],
+        "accessoryColors": {}
+      }
+    }
+  ]
+}
